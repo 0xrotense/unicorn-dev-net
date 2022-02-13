@@ -93,32 +93,33 @@
               From: "opacity-100 scale-100"
               To: "opacity-0 scale-95"
           -->
-          <div class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-            <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+          <div class="bg-indigo-800 absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+            <div class="rounded-lg shadow-sm overflow-hidden">
               <div class="px-5 pt-4 flex items-center justify-between">
                 <div>
-                  <img class="h-12 w-auto" src="./img/unicorndev_logo.svg" alt="">
-                </div>
-                <div class="-mr-2">
-                  <button id="btnmenu" type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                    <span class="sr-only">Close main menu</span>
-                    <!-- Heroicon name: outline/x -->
-                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
+                    <a href="https://unicorndev.net" class="flex items-center py-5 text-gray-200 hover:text-gray-400">
+                      <img class="h-12 w-auto" src="./img/unicorndev_logo.svg" alt="">
+                      <span class="font-bold pl-8">Unicorn{DEV}</span>
+                    </a>
+                  </div>
+                <div class="-mr-2 md:hidden flex items-center">
+                    <button class="mobile-menu-button text-white">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                      </button>
                 </div>
               </div>
-              <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Curriculum</a>
+              <div class="px-2 pt-2 pb-3 space-y-1 mobile-menu hidden md:hidden">
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-gray-900 hover:bg-gray-50">Curriculum</a>
   
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Tuition</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-gray-900 hover:bg-gray-50">Tuition</a>
   
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Team</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-gray-900 hover:bg-gray-50">Team</a>
   
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">About us</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-gray-900 hover:bg-gray-50">About us</a>
+                <a href="#" class="block w-full px-5 py-3 text-center font-medium text-indigo-200 bg-gray-50 hover:bg-gray-100"> FAQs </a>
               </div>
-              <a href="#" class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100"> FAQs </a>
             </div>
           </div>
         </div>
@@ -426,25 +427,35 @@
       </div>
     </div>
     <!--Our Partners-->
-    <h2 class="max-w-lg pt-6 font-serif text-3xl font-semibold tracking-tight text-gray-600 underline sm:text-3xl md:mx-auto">
-          <span class="relative">Partners from India, Uk and NG</span>
-        </span>
-      </h2>
-    <hr class="border-gray-200 my-9 dark:border-gray-700">
-                <div class="grid grid-cols-1 gap-1 mb-8 md:grid-cols-3 lg:grid-cols-3">
-                    <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
-                        <a href="https://crazysolution.net/" target="_blank" rel="noopener noreferrer"><img class="h-34 w-18 rounded-2xl" src="./img/cst_ng.png" alt=""></a>
-                    </div>
-
-                    <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
-                        <a href="https://codedamn.com/" target="_blank" rel="noopener noreferrer"><img class="h-34 w-18 rounded-2xl" src="./img/codedamn.png" alt=""></a>
-                    </div>
-
-                    <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
-                        <a href="#" target="_blank" rel="noopener noreferrer"><img class="h-24 w-60 rounded-2xl" src="./img/fs-tech.jpg" alt=""></a>
-                    </div>
-                </div>
-                <hr class="border-gray-200 my-9 dark:border-gray-700">
+    <!-- <h2 class="max-w-lg pt-6 sm:text-3xl md:mx-auto">
+          <span class="relative text-gray-800 text-2xl lg:text-4xl font-bold text-center mb-4 md:mb-6">Partners from India, Uk and NG</span>
+      </h2> -->
+      <div class="bg-white py-3 sm:py-4 lg:py-4">
+        <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+          <div class="bg-gray-100 rounded-lg px-4 py-6 md:py-8 lg:py-12">
+            <p class="text-indigo-500 lg:text-lg font-semibold text-center mb-2 md:mb-3">Introducing</p>
+      
+            <h2 class="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">Our Partners From India, UK and Nigeria</h2>
+      
+            <p class="max-w-screen-md text-gray-500 md:text-lg text-center mx-auto">In collaboration with one of the largest interactive learning company in India <b>Codedamn</b> . We'll be providing you with the best learning experience in the industry to be Job-ready. </p>
+            <hr class="border-gray-200 my-9 dark:border-gray-700">
+                        <div class="grid grid-cols-1 gap-1 mb-8 md:grid-cols-3 lg:grid-cols-3">
+                            <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+                                <a href="https://crazysolution.net/" target="_blank" rel="noopener noreferrer"><img class="h-34 w-18 rounded-2xl" src="./img/cst_ng.png" alt=""></a>
+                            </div>
+        
+                            <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+                                <a href="https://codedamn.com/" target="_blank" rel="noopener noreferrer"><img class="h-34 w-18 rounded-2xl" src="./img/codedamn.png" alt=""></a>
+                            </div>
+        
+                            <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+                                <a href="#" target="_blank" rel="noopener noreferrer"><img class="h-24 w-60 rounded-2xl" src="./img/fs-tech.jpg" alt=""></a>
+                            </div>
+                        </div>
+                        <hr class="border-gray-200 my-9 dark:border-gray-700">
+          </div>
+        </div>
+      </div>
 
 
     <!--Our Team-->
