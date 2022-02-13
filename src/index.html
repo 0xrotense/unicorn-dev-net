@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unicorn {Dev} - Become an International Software Developer</title>
+    <link rel="stylesheet" href="./output.css">
+</head>
+<body>
+    <header>
+        <!-- This example requires Tailwind CSS v2.0+ -->
+<div id="noter" class="bg-indigo-600">
+    <div class="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between flex-wrap">
+        <div class="w-0 flex-1 flex items-center">
+          <span class="flex p-2 rounded-lg bg-indigo-800">
+            <!-- Heroicon name: outline/speakerphone -->
+            <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+            </svg>
+          </span>
+          <p class="ml-3 font-medium text-white truncate">
+            <span class="md:hidden"> We announced a new opportunity! </span>
+            <span class="hidden md:inline"> Big news! We're excited to announce a brand new opportunity. </span>
+          </p>
+        </div>
+        <div class="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
+          <a href="#" class="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-indigo-600 bg-white hover:bg-indigo-50"> Learn more </a>
+        </div>
+        <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
+          <button id="clickb" type="button" onclick="closeBtn()" class="-mr-1 flex p-2 rounded-md hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2">
+            <span class="sr-only">Dismiss</span>
+            <!-- Heroicon name: outline/x -->
+            <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="relative bg-white overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+        <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          <polygon points="50,0 100,0 50,100 0,100" />
+        </svg>
+  
+        <div>
+          <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
+            <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
+              <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
+                <div class="flex items-center justify-between w-full md:w-auto">
+                  <a href="#">
+                    <span class="sr-only">Unicorn{Dev}</span>
+                    <img class="h-12 w-auto sm:h-12" src="./img/unicorndev_logo.svg">
+                  </a>
+                  <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+                      <span class="sr-only">Main menu</span>
+                      <!-- Heroicon name: outline/menu -->
+                      <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
+                <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Curriculum</a>
+  
+                <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Tuition</a>
+  
+                <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Team</a>
+  
+                <a href="#" class="font-medium text-gray-500 hover:text-gray-900">About us</a>
+  
+                <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">FAQs</a>
+              </div>
+            </nav>
+          </div>
+  
+          <!--
+            Mobile menu, show/hide based on menu open state.
+  
+            Entering: "duration-150 ease-out"
+              From: "opacity-0 scale-95"
+              To: "opacity-100 scale-100"
+            Leaving: "duration-100 ease-in"
+              From: "opacity-100 scale-100"
+              To: "opacity-0 scale-95"
+          -->
+          <div class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+            <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+              <div class="px-5 pt-4 flex items-center justify-between">
+                <div>
+                  <img class="h-12 w-auto" src="./img/unicorndev_logo.svg" alt="">
+                </div>
+                <div class="-mr-2">
+                  <button id="btnmenu" type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                    <span class="sr-only">Close main menu</span>
+                    <!-- Heroicon name: outline/x -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Curriculum</a>
+  
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Tuition</a>
+  
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Team</a>
+  
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">About us</a>
+              </div>
+              <a href="#" class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100"> FAQs </a>
+            </div>
+          </div>
+        </div>
+  
+        <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+          <div class="sm:text-center lg:text-left">
+            <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+              <span class="block xl:inline">Become a Software Developer</span>
+              <span class="block text-indigo-600 xl:inline">From Zero to Hero</span>
+            </h1>
+            <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">Gain the skills you need to get hired by global companies. Learn Expert in the industry. Connect to life-changing opportunities. We'll train you until you land a job!</p>
+            <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+              <div class="rounded-md shadow">
+                <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"> Apply Now </a>
+              </div>
+              <div class="mt-3 sm:mt-0 sm:ml-3">
+                <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"> Requirements </a>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+      <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="./img/unicorn_team.jpg" alt="">
+    </div>
+  </div>
+  
+</header>
+<main>
+<div class="bg-gray-50">
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+      <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+        <span class="block">Ready to dive in?</span>
+        <span class="block text-indigo-600">Become a Software Developer in 4 Months</span>
+      </h2>
+      <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+        <div class="inline-flex rounded-md shadow">
+          <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"> Apply Now </a>
+        </div>
+        <div class="ml-3 inline-flex rounded-md shadow">
+          <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50"> Learn more </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-primary">
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+          <div>
+            <p class="bg-green-400 inline-block px-3 py-px mb-4 text-xs font-bold tracking-wider text-slate-900 uppercase rounded-full bg-teal-accent-400">
+              New opportunity
+            </p>
+          </div>
+          <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-100 sm:text-4xl md:mx-auto">
+            <span class="relative inline-block">
+              <svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
+                <defs>
+                  <pattern id="07690130-d013-42bc-83f4-90de7ac68f76" x="0" y="0" width=".135" height=".30">
+                    <circle cx="1" cy="1" r=".7"></circle>
+                  </pattern>
+                </defs>
+                <rect fill="url(#07690130-d013-42bc-83f4-90de7ac68f76)" width="52" height="24"></rect>
+              </svg>
+              <span class="relative">Why</span>
+            </span>
+            Do We Exists?
+          </h2>
+          <p class="text-base text-gray-100 md:text-lg">
+            We're Building The Best Developers for Next Generation!
+          </p>
+        </div>
+        <div class="grid max-w-screen-lg mx-auto space-y-6 lg:grid-cols-2 lg:space-y-0 lg:divide-x">
+          <div class="space-y-6 sm:px-16">
+            <div class="flex flex-col max-w-md sm:flex-row">
+              <div class="mb-4 mr-4">
+                <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
+                  <svg class="w-8 h-8 text-deep-purple-accent-400 sm:w-10 sm:h-10" stroke="currentColor" viewBox="0 0 52 52">
+                    <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h6 class="mb-3 text-xl font-bold leading-5 text-gray-100">Your Own Dedicated Career Coach</h6>
+                <p class="text-sm text-gray-200">
+                    On top of gaining in-demand tech skills, you'll learn best practices to ace your job search and land a role you love, fast.
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-col max-w-md sm:flex-row">
+              <div class="mb-4 mr-4">
+                <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
+                  <svg class="w-8 h-8 text-deep-purple-accent-400 sm:w-10 sm:h-10" stroke="currentColor" viewBox="0 0 52 52">
+                    <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h6 class="mb-3 text-xl font-bold leading-5 text-gray-100">Instructors Who Really Care</h6>
+                <p class="text-sm text-gray-200">
+                    No matter your learning style or experience level, our diverse team of industry experts makes sure no one is left behind.
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-col max-w-md sm:flex-row">
+              <div class="mb-4 mr-4">
+                <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
+                  <svg class="w-8 h-8 text-deep-purple-accent-400 sm:w-10 sm:h-10" stroke="currentColor" viewBox="0 0 52 52">
+                    <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h6 class="mb-3 text-xl font-bold leading-5 text-gray-100">Inclusive Community & Lifelong Friendships</h6>
+                <p class="text-sm text-gray-200">
+                        At Unicorn{Dev}, you're more than just a seat in our classroom — you're part of a supportive community. Here, you can be heard, be seen, and be yourself. 
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-6 sm:px-16">
+            <div class="flex flex-col max-w-md sm:flex-row">
+              <div class="mb-4 mr-4">
+                <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
+                  <svg class="w-8 h-8 text-deep-purple-accent-400 sm:w-10 sm:h-10" stroke="currentColor" viewBox="0 0 52 52">
+                    <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h6 class="mb-3 text-xl font-bold leading-5 text-gray-100">Detailed feedback and reviews</h6>
+                <p class="text-sm text-gray-200">
+                  Our team provides a well detailed feedback and reviews on your code to maintain the best practice in the industry.
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-col max-w-md sm:flex-row">
+              <div class="mb-4 mr-4">
+                <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
+                  <svg class="w-8 h-8 text-deep-purple-accent-400 sm:w-10 sm:h-10" stroke="currentColor" viewBox="0 0 52 52">
+                    <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h6 class="mb-3 text-xl font-bold leading-5 text-gray-100">Your Collaborative Experience</h6>
+                <p class="text-sm text-gray-200">
+                    Learning to code on your own can be lonely and difficult. At Unicorn{Dev}, you’ll join one of the most collaborative and social learning communities in the world.
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-col max-w-md sm:flex-row">
+              <div class="mb-4 mr-4">
+                <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
+                  <svg class="w-8 h-8 text-deep-purple-accent-400 sm:w-10 sm:h-10" stroke="currentColor" viewBox="0 0 52 52">
+                    <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h6 class="mb-3 text-xl font-bold leading-5 text-gray-100">Job Guaranteed after Programme</h6>
+                <p class="text-sm text-gray-200">
+                    Networking with UnicornDev’s hiring partners, We will do everything in our power to help you find a job. However, we can't apply to, interview for, or land jobs for you. You will need to do that work yourself.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-12 mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            <span class="block py-4">What will you learn?</span>
+            <span class="block text-indigo-600">In-Demand Tools & Resume-Worthy Skills</span>
+        </h2>
+        <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto py-4">Our team curates a curriculum that helps you learn the most in-demand skills in web development so you can get a great job. During our full-time, 10-month program, you’ll develop your technical skills, build projects, and improve the soft skills you need to excel in remote teams.</p>
+      </div>
+      <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+        <div class="p-2 sm:w-1/2 w-full">
+          <div class="bg-gray-100 rounded flex p-4 h-full items-center">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+              <path d="M22 4L12 14.01l-3-3"></path>
+            </svg>
+            <span class="title-font font-medium">HTML,CSS & Javascript</span>
+          </div>
+        </div>
+        <div class="p-2 sm:w-1/2 w-full">
+          <div class="bg-gray-100 rounded flex p-4 h-full items-center">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+              <path d="M22 4L12 14.01l-3-3"></path>
+            </svg>
+            <span class="title-font font-medium">React & Redux</span>
+          </div>
+        </div>
+        <div class="p-2 sm:w-1/2 w-full">
+          <div class="bg-gray-100 rounded flex p-4 h-full items-center">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+              <path d="M22 4L12 14.01l-3-3"></path>
+            </svg>
+            <span class="title-font font-medium">Databases</span>
+          </div>
+        </div>
+        <div class="p-2 sm:w-1/2 w-full">
+          <div class="bg-gray-100 rounded flex p-4 h-full items-center">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+              <path d="M22 4L12 14.01l-3-3"></path>
+            </svg>
+            <span class="title-font font-medium">Algorithms & Data Structures</span>
+          </div>
+        </div>
+        <div class="p-2 sm:w-1/2 w-full">
+          <div class="bg-gray-100 rounded flex p-4 h-full items-center">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+              <path d="M22 4L12 14.01l-3-3"></path>
+            </svg>
+            <span class="title-font font-medium">Ruby & Ruby On Rails</span>
+          </div>
+        </div>
+        <div class="p-2 sm:w-1/2 w-full">
+          <div class="bg-gray-100 rounded flex p-4 h-full items-center">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-indigo-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+              <path d="M22 4L12 14.01l-3-3"></path>
+            </svg>
+            <span class="title-font font-medium">Effective Networking
+                Time Management, Cross-cultural Communication, Remote Work Best Practices, How to Prepare for Interviews, Effective Job Searching</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  
+  <div class="bg-gray-300">
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+          <div>
+            <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-gray-100 uppercase rounded-full bg-green-500">
+              Application Process
+            </p>
+          </div>
+          <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+            <span class="relative inline-block">
+              <svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
+                <defs>
+                  <pattern id="84d09fa9-a544-44bd-88b2-08fdf4cddd38" x="0" y="0" width=".135" height=".30">
+                    <circle cx="1" cy="1" r=".7"></circle>
+                  </pattern>
+                </defs>
+                <rect fill="url(#84d09fa9-a544-44bd-88b2-08fdf4cddd38)" width="52" height="24"></rect>
+              </svg>
+              <span class="relative">How To Get Started Today ?</span>
+            </span>
+          </h2>
+          <p class="text-base text-gray-700 md:text-lg">
+            The journey of a thousand miles begins with a click.
+          </p>
+        </div>
+        <div class="grid gap-8 row-gap-5 md:row-gap-8 lg:grid-cols-3">
+          <div class="p-5 duration-300 transform bg-white border-2 border-dashed rounded shadow-sm border-primary hover:-translate-y-2">
+            <div class="flex items-center mb-2">
+              <p class="flex items-center justify-center w-10 h-10 mr-2 text-lg font-bold text-white rounded-full bg-primary">
+                1
+              </p>
+              <p class="text-lg font-bold leading-5">Join The Program</p>
+            </div>
+            <p class="text-sm text-gray-900">
+              Join the program to pass our test and pay the Tuition Fee, then you will be invited for a physical/remote interview.
+            </p>
+          </div>
+          <div class="p-5 duration-300 transform bg-white border-2 border-dashed rounded shadow-sm border-primary hover:-translate-y-2">
+            <div class="flex items-center mb-2">
+              <p class="flex items-center justify-center w-10 h-10 mr-2 text-lg font-bold text-white rounded-full bg-primary">
+                2
+              </p>
+              <p class="text-lg font-bold leading-5">Join the Ongoing Cohort</p>
+            </div>
+            <p class="text-sm text-gray-900">
+              You will be invited to join the ongoing cohort and start building real world projects with mentors and mates.
+            </p>
+          </div>
+          <div class="relative p-5 duration-300 transform bg-white border-2 rounded shadow-sm border-primary hover:-translate-y-2">
+            <div class="flex items-center mb-2">
+              <p class="flex items-center justify-center w-10 h-10 mr-2 text-lg font-bold text-white rounded-full bg-primary">
+                3
+              </p>
+              <p class="text-lg font-bold leading-5">Get Job placement</p>
+            </div>
+            <p class="text-sm text-gray-900">
+                After the 6 months program, We will work together with your mentor to source for suitable jobs for you and prepare you for interviews.
+            </p>
+            <p class="absolute top-0 right-0 flex items-center justify-center w-8 h-8 -mt-4 -mr-4 font-bold rounded-full bg-primary sm:-mt-5 sm:-mr-5 sm:w-10 sm:h-10">
+              <svg class="text-gray-300 w-7" stroke="currentColor" viewBox="0 0 24 24">
+                <polyline fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="6,12 10,16 18,8"></polyline>
+              </svg>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Our Partners-->
+    <h2 class="max-w-lg pt-6 font-serif text-3xl font-semibold tracking-tight text-gray-600 underline sm:text-3xl md:mx-auto">
+          <span class="relative">Partners from India, Uk and NG</span>
+        </span>
+      </h2>
+    <hr class="border-gray-200 my-9 dark:border-gray-700">
+                <div class="grid grid-cols-1 gap-1 mb-8 md:grid-cols-3 lg:grid-cols-3">
+                    <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+                        <a href="https://crazysolution.net/" target="_blank" rel="noopener noreferrer"><img class="h-34 w-18 rounded-2xl" src="./img/cst_ng.png" alt=""></a>
+                    </div>
+
+                    <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+                        <a href="https://codedamn.com/" target="_blank" rel="noopener noreferrer"><img class="h-34 w-18 rounded-2xl" src="./img/codedamn.png" alt=""></a>
+                    </div>
+
+                    <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+                        <a href="#" target="_blank" rel="noopener noreferrer"><img class="h-24 w-60 rounded-2xl" src="./img/fs-tech.jpg" alt=""></a>
+                    </div>
+                </div>
+                <hr class="border-gray-200 my-9 dark:border-gray-700">
+
+
+    <!--Our Team-->
+    
+    <div class="bg-white mt-12 py-6 sm:py-8 lg:py-12">
+        <div class="max-w-screen-xl px-4 md:px-8 mx-auto">
+          <!-- text - start -->
+          <div class="mb-10 md:mb-16">
+            <h2 class="text-gray-800 text-4xl lg:text-4xl font-bold text-center mb-4 md:mb-6">Meet Our Team</h2>
+      
+            <p class="max-w-screen-md text-gray-500 md:text-lg text-center mx-auto">We got your back with team members across 3 countries, who come together to make an impact through Tech Skills. Get to know amzaing team making Unicorn{Dev} possible.</p>
+          </div>
+          <!-- text - end -->
+      
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-8">
+            <!-- person - start -->
+            <div class="flex flex-col items-center bg-gray-100 rounded-lg p-4 lg:p-8">
+              <div class="w-24 md:w-32 h-24 md:h-32 bg-gray-200 rounded-full overflow-hidden shadow-lg mb-2 md:mb-4">
+                <img src="https://images.unsplash.com/photo-1567515004624-219c11d31f2e??auto=format&q=75&fit=crop&w=256" loading="lazy" alt="Photo by Radu Florin" class="w-full h-full object-cover object-center" />
+              </div>
+      
+              <div>
+                <div class="text-indigo-500 md:text-lg font-bold text-center">Rotense Gabriel M</div>
+                <p class="text-gray-500 text-sm md:text-base text-center mb-3 md:mb-4">Founder / CTO</p>
+      
+                <!-- social - start -->
+                <div class="flex justify-center">
+                  <div class="flex gap-4">
+                    <a href="#" target="_blank" class="text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100">
+                      <svg class="w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                      </svg>
+                    </a>
+      
+                    <a href="#" target="_blank" class="text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100">
+                      <svg class="w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <!-- social - end -->
+              </div>
+            </div>
+            <!-- person - end -->
+      
+            <!-- person - start -->
+            <div class="flex flex-col items-center bg-gray-100 rounded-lg p-4 lg:p-8">
+              <div class="w-24 md:w-32 h-24 md:h-32 bg-gray-200 rounded-full overflow-hidden shadow-lg mb-2 md:mb-4">
+                <img src="https://images.unsplash.com/photo-1532073150508-0c1df022bdd1?auto=format&q=75&fit=crop&w=256" loading="lazy" alt="Photo by christian ferrer" class="w-full h-full object-cover object-center" />
+              </div>
+      
+              <div>
+                <div class="text-indigo-500 md:text-lg font-bold text-center">Alex F Smith</div>
+                <p class="text-gray-500 text-sm md:text-base text-center mb-3 md:mb-4">HR Manager & DevOps</p>
+      
+                <!-- social - start -->
+                <div class="flex justify-center">
+                  <div class="flex gap-4">
+                    <a href="#" target="_blank" class="text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100">
+                      <svg class="w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                      </svg>
+                    </a>
+      
+                    <a href="#" target="_blank" class="text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100">
+                      <svg class="w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <!-- social - end -->
+              </div>
+            </div>
+            <!-- person - end -->
+      
+            <!-- person - start -->
+            <div class="flex flex-col items-center bg-gray-100 rounded-lg p-4 lg:p-8">
+              <div class="w-24 md:w-32 h-24 md:h-32 bg-gray-200 rounded-full overflow-hidden shadow-lg mb-2 md:mb-4">
+                <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&q=75&fit=crop&w=256" loading="lazy" alt="Photo by Ayo Ogunseinde" class="w-full h-full object-cover object-center" />
+              </div>
+      
+              <div>
+                <div class="text-indigo-500 md:text-lg font-bold text-center">Yusuf Sodeeq</div>
+                <p class="text-gray-500 text-sm md:text-base text-center mb-3 md:mb-4">Backend Developer</p>
+      
+                <!-- social - start -->
+                <div class="flex justify-center">
+                  <div class="flex gap-4">
+                    <a href="#" target="_blank" class="text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100">
+                      <svg class="w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                      </svg>
+                    </a>
+      
+                    <a href="#" target="_blank" class="text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100">
+                      <svg class="w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <!-- social - end -->
+              </div>
+            </div>
+            <!-- person - end -->
+      
+            <!-- person - start -->
+            <div class="flex flex-col items-center bg-gray-100 rounded-lg p-4 lg:p-8">
+              <div class="w-24 md:w-32 h-24 md:h-32 bg-gray-200 rounded-full overflow-hidden shadow-lg mb-2 md:mb-4">
+                <img src="https://images.unsplash.com/photo-1529068755536-a5ade0dcb4e8?auto=format&q=75&fit=crop&w=256" loading="lazy" alt="Photo by Midas Hofstra" class="w-full h-full object-cover object-center" />
+              </div>
+      
+              <div>
+                <div class="text-indigo-500 md:text-lg font-bold text-center">Buhari Ibrahim</div>
+                <p class="text-gray-500 text-sm md:text-base text-center mb-3 md:mb-4">Frontend Developer</p>
+      
+                <!-- social - start -->
+                <div class="flex justify-center">
+                  <div class="flex gap-4">
+                    <a href="#" target="_blank" class="text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100">
+                      <svg class="w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                      </svg>
+                    </a>
+      
+                    <a href="#" target="_blank" class="text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100">
+                      <svg class="w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <!-- social - end -->
+              </div>
+            </div>
+            <!-- person - end -->
+      
+
+          </div>
+        </div>
+      </div>    
+</main>
+
+<footer class="bg-indigo-900">
+    <div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+        <div class="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="sm:col-span-2">
+            <a href="/" aria-label="Go home" title="unicorndev" class="inline-flex items-center">
+              <img class="h-12 w-auto" src="./img/unicorndev_logo.svg" alt="">
+              <span class="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">Unicorn{DEV}</span>
+            </a>
+            <div class="mt-6 lg:max-w-sm">
+              <p class="text-sm text-gray-100">
+                We're Building The Best Software Developers for Next Generation!
+              </p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <p class="text-base font-bold tracking-wide text-white">Support</p>
+            <div class="flex">
+              <p class="mr-1 text-gray-100 font-bold">Phone:</p>
+              <a href="tel:850-123-5021" aria-label="Our phone" title="Our phone" class="transition-colors duration-300 text-gray-100">+234XXXXXXXXX</a>
+            </div>
+            <div class="flex">
+              <p class="mr-1 text-gray-100 font-bold">Email:</p>
+              <a href="mailto:hello@unicorndev.net" aria-label="Our email" title="Our email" class="transition-colors duration-300 text-gray-100">hello@unicorndev.net</a>
+            </div>
+            <div class="flex">
+              <p class="mr-1 text-white font-bold">Address:</p>
+              <a href="#" rel="noopener noreferrer" aria-label="Our address" title="Our address" class="transition-colors duration-300 text-gray-100">
+                Alagbaka, GRA, Akure.
+              </a>
+            </div>
+          </div>
+          <div>
+            <span class="text-base font-bold tracking-wide text-gray-100">Follow Us:</span>
+            <div class="flex items-center mt-1 space-x-3">
+              <a href="/" class="text-white transition-colors duration-300 hover:text-deep-purple-accent-400">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
+                  <path
+                    d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z"
+                  ></path>
+                </svg>
+              </a>
+              <a href="/" class="text-gray-100 transition-colors duration-300 hover:text-deep-purple-accent-400">
+                <svg viewBox="0 0 30 30" fill="currentColor" class="h-6">
+                  <circle cx="15" cy="15" r="4"></circle>
+                  <path
+                    d="M19.999,3h-10C6.14,3,3,6.141,3,10.001v10C3,23.86,6.141,27,10.001,27h10C23.86,27,27,23.859,27,19.999v-10   C27,6.14,23.859,3,19.999,3z M15,21c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S18.309,21,15,21z M22,9c-0.552,0-1-0.448-1-1   c0-0.552,0.448-1,1-1s1,0.448,1,1C23,8.552,22.552,9,22,9z"
+                  ></path>
+                </svg>
+              </a>
+              <a href="/" class="text-gray-100 transition-colors duration-300 hover:text-deep-purple-accent-400">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
+                  <path
+                    d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+
+          </div>
+        </div>
+        <div class="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
+          <p class="text-sm text-gray-100">
+            © Copyright 2022 Unicorn{DEV}. All rights reserved.
+          </p>
+          <ul class="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
+            <li>
+              <a href="/" class="text-sm text-gray-100 transition-colors duration-300 hover:text-deep-purple-accent-400">F.A.Q</a>
+            </li>
+            <li>
+              <a href="/" class="text-sm text-gray-100 transition-colors duration-300 hover:text-deep-purple-accent-400">Curriculum</a>
+            </li>
+            <li>
+              <a href="/" class="text-sm text-gray-100 transition-colors duration-300 hover:text-deep-purple-accent-400">Tution</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/app.js"></script>
+</body>
+</html>

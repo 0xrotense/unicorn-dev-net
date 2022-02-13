@@ -1,0 +1,22 @@
+{
+  "name": "unicorndevnet",
+  "version": "1.0.0",
+  "description": "UnicornDevNet Portal",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rotensepro/unicorn-dev-net.git"
+  },
+  "author": "Rotense",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rotensepro/unicorn-dev-net/issues"
+  },
+  "homepage": "https://github.com/rotensepro/unicorn-dev-net#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.18"
+  }
+}
